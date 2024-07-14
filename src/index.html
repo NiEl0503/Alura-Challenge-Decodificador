@@ -16,23 +16,25 @@
     </header>
     <main>
         <section aria-labelledby="decoder-title">
-            <h1 id="decoder-title" class="sr-only">Decodificador</h1>
             <div class="content-wrapper">
                 <div class="left-content">
                     <div class="text">
                         <label for="mensaje"></label>
                         <input type="text" id="mensaje" name="mensaje" placeholder="Digite seu texto">
                     </div>
-                    <div class="buttons">
+                    <span class="text-buttons">
                         <p>Apenas letras minúsculas e sem acento.</p>
+                    </span>
+                    <div class="buttons">
                         <button type="button" onclick="criptografar()">Criptografar</button>
                         <button type="button" onclick="descriptografar()">Descriptografar</button>
                     </div>
                 </div>
                 <div class="right-content">
                     <div class="displayedMessage">
-                        <img src="./assets/pesquisa.jpg" alt="Homem fazendo uma pesquisa com uma lupa">
+                        <img class="displayedMessage-img" src="./assets/pesquisa.jpg" alt="Homem fazendo uma pesquisa com uma lupa">
                         <p>Nenhuma mensagem encontrada</p>
+                        <br>
                         <p>Digite um texto que você deseja criptografar ou descriptografar</p>
                     </div>
                 </div>
