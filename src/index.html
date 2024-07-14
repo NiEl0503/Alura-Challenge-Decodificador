@@ -30,12 +30,11 @@
                         <button type="button" onclick="descriptografar()">Descriptografar</button>
                     </div>
                 </div>
-                <div class="right-content">
-                    <div class="displayedMessage">
-                        <img class="displayedMessage-img" src="./assets/pesquisa.jpg" alt="Homem fazendo uma pesquisa com uma lupa">
-                        <p>Nenhuma mensagem encontrada</p>
-                        <br>
-                        <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+                <div class="right-content" id="displayArea">
+                    <div class="displayedMessage" id="messageDisplay">
+                        <img class="displayedMessage-img" src="./assets/pesquisa.jpg" alt="Homem fazendo uma pesquisa com uma lupa" id="searchImage">
+                        <p id="defaultMessage">Nenhuma mensagem encontrada! Digite um texto que você deseja criptografar ou descriptografar</p>
+                        <p id="inputMessage" style="display: none;"></p>
                     </div>
                 </div>
             </div>
