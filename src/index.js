@@ -16,3 +16,36 @@ document.getElementById('mensaje').addEventListener('input', function() {
         inputMessage.textContent = '';
     }
 });
+
+function criptografarTexto(texto) {
+    let textoCriptografado = texto
+        .replace(/e/g, 'enter')
+        .replace(/i/g, 'imes')
+        .replace(/a/g, 'ai')
+        .replace(/o/g, 'ober')
+        .replace(/u/g, 'ufat');
+    return textoCriptografado;
+}
+
+function criptografar() {
+    let texto = document.getElementById('mensaje').value.trim();
+    const errorMessage = document.getElementById('error-message');
+
+    if (!/^[a-z\s]+$/.test(texto)) {
+        errorMessage.style.display = 'block';
+        return;
+    } else {
+        errorMessage.style.display = 'none';
+    }
+
+    let textoCriptografado = criptografarTexto(texto);
+    
+    let outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = `<p>${textoCriptografado}</p>`;
+
+    document.getElementById('mensaje').value = '';
+
+    document.getElementById('searchImage').style.display = 'none';
+    document.getElementById('defaultMessage').style.display = 'none';
+    document.getElementById('inputMessage').style.display = 'none'; 
+}

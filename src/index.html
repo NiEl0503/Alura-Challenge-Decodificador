@@ -21,6 +21,7 @@
                     <div class="text">
                         <label for="mensaje"></label>
                         <input type="text" id="mensaje" name="mensaje" placeholder="Digite seu texto">
+                        <p class= "message-error" id="error-message">O texto deve conter apenas letras minúsculas, sem acentos ou caracteres especiais.</p>
                     </div>
                     <span class="text-buttons">
                         <p>Apenas letras minúsculas e sem acento.</p>
@@ -36,6 +37,7 @@
                         <p id="defaultMessage">Nenhuma mensagem encontrada! Digite um texto que você deseja criptografar ou descriptografar</p>
                         <p id="inputMessage" style="display: none;"></p>
                     </div>
+                    <div id="output"></div>
                 </div>
             </div>
         </section>
@@ -46,5 +48,5 @@
             <span class="name">Ninoska Contreras</span>
         </a>
     </footer>
-    <script src="index.js" type="module"></script>
+    <script src="index.js"></script>
 </body>

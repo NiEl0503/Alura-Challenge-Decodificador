@@ -131,6 +131,11 @@ p {
     margin-top: 5px;
 }
 
+.message-error {
+    color: var(--second-color);
+    display: none;
+}
+
 footer {
     background-color: var(--first-color);
     color: var(--second-color);
