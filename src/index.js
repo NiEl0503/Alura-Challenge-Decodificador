@@ -49,3 +49,36 @@ function criptografar() {
     document.getElementById('defaultMessage').style.display = 'none';
     document.getElementById('inputMessage').style.display = 'none'; 
 }
+
+function descriptografarTexto(texto) {
+    let textoDescriptografado = texto
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ai/g, 'a')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
+    return textoDescriptografado;
+}
+
+function descriptografar() {
+    let texto = document.getElementById('mensaje').value.trim();
+    const errorMessage = document.getElementById('error-message');
+
+    if (!/^[a-z\s]+$/.test(texto)) {
+        errorMessage.style.display = 'block';
+        return;
+    } else {
+        errorMessage.style.display = 'none';
+    }
+
+    let textoDescriptografado = descriptografarTexto(texto);
+    
+    let outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = `<p>${textoDescriptografado}</p>`;
+
+    document.getElementById('mensaje').value = '';
+
+    document.getElementById('searchImage').style.display = 'none';
+    document.getElementById('defaultMessage').style.display = 'none';
+    document.getElementById('inputMessage').style.display = 'none'; 
+}
